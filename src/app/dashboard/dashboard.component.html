@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <span class="title" (click)="goToUsers()">My Application</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <p class="user-email">Hi, <span>{{userEmail}}</span></p>
+    <div class="mat-menu-item" mat-menu-item color="accent" (click)="fileInput.click()">
+      <mat-icon color="accent">upload_file</mat-icon>
+      <span>Import excel</span>
+      <input #fileInput type="file" (change)="upload($event)" style="display:none;"
+        accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+    </div>
+    <button mat-menu-item color="accent" (click)="download()">
+      <mat-icon color="accent">downloading</mat-icon>
+      <span>Download excel</span>
+    </button>
+    <button mat-menu-item color="accent" (click)="logout()">
+      <mat-icon color="accent">logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+<div class="background">
+  <router-outlet></router-outlet>
+</div>

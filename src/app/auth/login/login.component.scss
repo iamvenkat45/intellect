@@ -1,0 +1,60 @@
+.login-container {
+  background: url('./../../../assets/login_bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-form {
+  background: rgba(255, 255, 255, 0.8);
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+button {
+  border-radius: 20px;
+  color: #fff;
+  padding: 0 50px;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 200px;
+  width: 300px;
+  padding-top: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.form-footer {
+  margin-top: 30px;
+}
+
